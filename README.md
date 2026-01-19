@@ -1,1 +1,1 @@
-# programming-bitcoin
+# Programming Bitcoin

@@ -1,18 +1,6 @@
-import {
-    add,
-    createFieldElement,
-    div,
-    equals,
-    mul,
-    notEquals,
-    pow,
-    sub,
-} from "./field-element";
+// Exercise 1
+// const notEquals = (a: FieldElement, b: FieldElement): boolean => {
+//     return !equals(a, b);
+// };
 
-const a = createFieldElement(7, 13);
-const b = createFieldElement(6, 13);
-
-console.log(a === b);
-// false
-console.log(a === a);
-// true
+// Exercise 2

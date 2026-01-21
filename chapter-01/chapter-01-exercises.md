@@ -24,3 +24,9 @@ const sub = (a: FieldElement, b: FieldElement): FieldElement => {
     return createFieldElement(num, a.prime);
 };
 ```
+
+# Exercise 4
+
+- (95 \* 45 \* 31) % 97 = 23
+- (17 \* 13 \* 19 \* 44) % 97 = 68
+- (12<sup>7</sup> \* 77<sup>49</sup>) % 97 = (35831808 \* 2.7418616e+92) % 97 = 63

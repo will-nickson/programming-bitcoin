@@ -69,3 +69,33 @@ const mul = (a: FieldElement, b: FieldElement): FieldElement => {
     return createFieldElement(num, a.prime);
 };
 ```
+
+# Exercise 7
+
+```typescript
+const primes = [7, 11, 17, 31];
+
+function modPow(base, exponent, modulus) {
+    let result = 1;
+    base = base % modulus;
+
+    while (exponent > 0) {
+        if (exponent % 2 === 1) {
+            result = (result * base) % modulus;
+        }
+        exponent = Math.floor(exponent / 2);
+        base = (base * base) % modulus;
+    }
+
+    return result;
+}
+
+for (const p of primes) {
+    const a = [];
+    const field = Array.from({ length: p - 1 }, (_, i) => i + 1);
+    for (const i of field) {
+        a.push(modPow(i, p - 1, p));
+    }
+    console.log(a);
+}
+```

@@ -57,3 +57,15 @@ for (const k of [1, 3, 7, 13, 18]) {
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
 ```
+
+# Exercise 6
+
+```typescript
+const mul = (a: FieldElement, b: FieldElement): FieldElement => {
+    if (a.prime !== b.prime) {
+        throw new TypeError("Cannot multiply two numbers in different Fields");
+    }
+    const num = (a.num * b.num) % a.prime;
+    return createFieldElement(num, a.prime);
+};
+```

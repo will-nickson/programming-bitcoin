@@ -107,3 +107,11 @@ for (const p of primes) {
     1, 1, 1, 1, 1,
 ];
 ```
+
+# Exercise 8
+
+Solve the following equations in F^31:
+
+- 3 / 24 = 3 \* 24^(31-2) = 3 \* 24^29 % 31 = 4
+- 17^-3 = 17^27 % 31 = 29
+- 4^-4 \* 11 = 11 \* 4^26 % 31 = 13

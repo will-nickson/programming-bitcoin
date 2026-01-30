@@ -115,3 +115,17 @@ Solve the following equations in F^31:
 - 3 / 24 = 3 \* 24^(31-2) = 3 \* 24^29 % 31 = 4
 - 17^-3 = 17^27 % 31 = 29
 - 4^-4 \* 11 = 11 \* 4^26 % 31 = 13
+
+# Exercise 9
+
+```typescript
+const div = (a: FieldElement, b: FieldElement): FieldElement => {
+    if (a.prime !== b.prime) {
+        throw new TypeError("Cannot divide two numbers in different Fields");
+    }
+    // Use Fermat's little theorem: a^(p-1) % p == 1
+    // Therefore: 1/n == n^(p-2) % p
+    const num = (a.num * modPow(b.num, a.prime - 2, a.prime)) % a.prime;
+    return createFieldElement(num, a.prime);
+};
+```
